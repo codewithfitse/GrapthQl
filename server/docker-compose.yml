@@ -1,0 +1,15 @@
+services:
+  postgres:
+    container_name: graphql-db
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: graphql
+      POSTGRES_PASSWORD: graphql
+
+volumes:
+  postgres_data:
